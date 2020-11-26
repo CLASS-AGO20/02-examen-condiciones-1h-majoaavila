@@ -30,6 +30,28 @@ export default class App {
         }
     }
 
+    
+    puedeCircular(dia, terminacion) {
+        if(dia === 1 && terminacion === 0) {
+            return true;
+
+        } else if(dia === 2 && terminacion === 1) {
+            return true;
+
+        } else if(dia === 3 && terminacion === 2) {
+            return true;
+
+        } else if(dia === 4 && terminacion ===2) {
+            return true;
+
+        } else if( dia >= 1 && dia <= 7 && terminacion >= 3 && terminacion <= 9) {
+            return true;
+
+            
+        } else {
+            return false;
+        }
+    }
 }
 
 let app = new App();
@@ -49,6 +71,21 @@ console.log(app.convertir(150));
 console.log(app.convertir(199));
 console.log(app.convertir(200));
 console.log(app.convertir(300));
+
+console.log("Probando puedeCircular()");
+console.log(app.puedeCircular(1, 0));
+console.log(app.puedeCircular(1, 1));
+console.log(app.puedeCircular(2, 1));
+console.log(app.puedeCircular(2, 2));
+console.log(app.puedeCircular(3, 2));
+console.log(app.puedeCircular(4, 2));
+console.log(app.puedeCircular(3, 1));
+console.log(app.puedeCircular(6, 5));
+
+
+
+
+
 
 
 
